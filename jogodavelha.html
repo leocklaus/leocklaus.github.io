@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <style>
+        .quadro{
+            width: 300px; 
+            height: 300px;
+            float: left;
+            margin-left: 10px;
+            margin-right: 30px;
+        }
+
+        .linha{
+            width: 300px; 
+            height: 100px;
+        }
+
+        .seletor{
+            width: 96px;
+            height: 96px;
+            float: left;
+            border-color: gray;
+            border-style: solid;
+            border-width: 1px; 
+            border-radius: 10px; 
+            margin-right: 2px; 
+            margin-bottom: 2px;
+        }
+
+        .layout{
+            width: 650px;
+            height: 500px;
+            background-color:whitesmoke;
+            border-radius: 10px;
+        }
+
+        .pg{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .placar{
+            width: 300px;
+            float: left;
+            height: 300px;
+        }
+
+        .jogadoratual{
+            width: 300px;
+            height: 64px;
+            margin-bottom: 2px;
+            border-style: solid;
+            border-radius: 10px;
+            border-width: 1px;
+            border-color: gray;
+            align-content: center;
+            padding-top: 32px;
+        }
+
+        .resultado{
+            width: 300px;
+            height: 196px;
+            border-style: solid;
+            border-radius: 10px;
+            border-width: 1px;
+            border-color: gray;
+            align-content: center;
+        }
+
+        .tit_result{
+            width: 300px;
+            height: 35px;
+            padding-top: 10px;
+        }
+
+        .placar_nome{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            text-align: center;
+        }
+
+        .res_verm{
+            width: 150px;
+            height: 151px;
+            float: left;
+        }
+
+        .time{
+            width: 150px;
+            height: 31px;
+            padding-top: 10px;
+        }
+
+        .res_time{
+            width: 150px;
+            height: 100px;
+            padding-top: 10px;
+        }
+
+        .res_verde{
+            width: 150px;
+            height: 151px;
+            float: left;
+        }
+
+        .subtitulo{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            text-align: center;
+        }
+
+        .numero_placar{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            text-align: center;
+            font-size: 80px;
+        }
+
+        .topo{
+            width: 650px;
+            height: 150px;
+            text-align: center;
+            
+            
+        }
+
+        .logo{
+            margin-top:10px;
+            
+        }
+
+        .nome_jogador{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            color: red;
+        
+        }
+
+        #res_j1{
+            color: red;
+        }
+
+        #res_j2{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="pg" class="pg">
+        <div class="layout">
+            <div class="topo">
+                <img src="logo_jogo.png" class="logo">
+            </div>
+            <div id="quadro_geral" class="quadro"> 
+                <div id="linha1" class="linha">
+                    <div id="aa" class="seletor" onclick='jogada("aa",0,0)'></div>
+                    <div id="ab" class="seletor" onclick='jogada("ab",0,1)'></div>
+                    <div id="ac" class="seletor" onclick='jogada("ac",0,2)'></div>
+                </div>
+                <div id="linha2" class="linha">
+                    <div id="ba" class="seletor" onclick='jogada("ba",1,0)'></div>
+                    <div id="bb" class="seletor" onclick='jogada("bb",1,1)'></div>
+                    <div id="bc" class="seletor" onclick='jogada("bc",1,2)'></div>
+                </div>   
+                <div id="linha3" class="linha">
+                    <div id="ca" class="seletor" onclick='jogada("ca",2,0)'></div>
+                    <div id="cb" class="seletor" onclick='jogada("cb",2,1)'></div>
+                    <div id="cc" class="seletor" onclick='jogada("cc",2,2)'></div>
+                </div>
+            </div>
+            <div id="placar" class="placar">
+                <div class="jogadoratual">
+                    <h2 id="atual" class="nome_jogador">JOGADOR VERMELHO</h2>
+                </div>
+                <div class="resultado">
+                    <div class="tit_result">
+                        <h3 class="placar_nome">PLACAR</h3>
+                    </div>
+                    <div class="res_verm">
+                        <div class="time"><h4 class="subtitulo">Vermelho</h4></div>
+                        <div class="res_time">
+                            <p id="res_j1" class="numero_placar">0</p>
+                        </div>
+                    </div>
+                    <div class="res_verde">
+                        <div class="time"><h4 class="subtitulo">Verde</h4></div>
+                        <div class="res_time">
+                            <p id="res_j2" class="numero_placar">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <script>
+        var matriz = [[0,0,0], [0,0,0], [0,0,0]];
+        var j_atual = 1;
+        var j_inicio_rodada = 1;
+        var res_j1 = 0;
+        var res_j2 = 0;
+        var cont_rodada = 0;
+        
+        function jogada(q, l, c){
+            cont_rodada++;
+            if(j_atual == 1){
+                vermelho(q, l, c);
+            }else{
+                verde(q, l, c);
+            }
+        }
+
+        function vermelho(q, l, c){
+            if (matriz[l][c] != 0){
+                alert("Campo ja preenchido, escolha outro por favor.");
+            }else{
+                matriz[l][c] = 1;
+                document.getElementById(q).style.backgroundColor = "red";
+                verifica(1,2);
+            }
+        }
+
+        function verde(q, l, c){
+            if (matriz[l][c] != 0){
+                alert("Campo ja preenchido, escolha outro por favor.");
+            }else{
+                matriz[l][c] = 2;
+                document.getElementById(q).style.backgroundColor = "green";
+                verifica(2,1);
+            }
+        }
+
+        function verifica(m,j){
+            if (matriz[0][0] == m && matriz[0][1] == m && matriz[0][2] == m){
+                venceu(m);
+            }else if (matriz[1][0] == m && matriz[1][1] == m && matriz[1][2] == m){
+                venceu(m);
+            }else if (matriz[2][0] == m && matriz[2][1] == m && matriz[2][2] == m){
+                venceu(m);
+            }else if (matriz[0][0] == m && matriz[1][0] == m && matriz[2][0] == m){
+                venceu(m);
+            }else if (matriz[0][1] == m && matriz[1][1] == m && matriz[2][1] == m){
+                venceu(m);
+            }else if (matriz[0][2] == m && matriz[1][2] == m && matriz[2][2] == m){
+                venceu(m);
+            }else if (matriz[0][0] == m && matriz[1][1] == m && matriz[2][2] == m){
+                venceu(m);
+            }else if (matriz[2][0] == m && matriz[1][1] == m && matriz[0][2] == m){
+                venceu(m);
+            }else if(cont_rodada == 9){
+                venceu("empate");
+            }else{
+                atualiza(j);
+            }
+        }
+        
+        function atualiza(j){
+            j_atual = j;
+            if (j == 1){
+                document.getElementById("atual").innerHTML = "JOGADOR VERMELHO";
+                document.getElementById("atual").style.color = "red";
+            }else{
+                document.getElementById("atual").innerHTML = "JOGADOR VERDE";
+                document.getElementById("atual").style.color = "green";
+            }
+
+        }
+
+        function venceu(m){
+            if (m == 1){
+                window.setTimeout('alert("Vermelho Venceu.");', 100);
+                window.setTimeout('novo(1)', 150);
+                
+            }else if (m == "empate"){
+                window.setTimeout('alert("Empate.");', 100);
+                window.setTimeout('novo(0)', 150);
+            }else{
+                window.setTimeout('alert("Verde Venceu.")', 100);
+                window.setTimeout('novo(2)', 150);                   
+                
+            }
+        }
+
+        function novo(j){
+            if(confirm("Deseja jogar outra partida?")){
+                
+                if (j_inicio_rodada == 1){
+                    j_inicio_rodada = 2;
+                    j_atual = 2;
+                    document.getElementById("atual").innerHTML = "JOGADOR VERDE";
+                    document.getElementById("atual").style.color = "green";                   
+
+                }else{
+                    j_inicio_rodada = 1;
+                    j_atual = 1;
+                    document.getElementById("atual").innerHTML = "JOGADOR VERMELHO";
+                    document.getElementById("atual").style.color = "red";
+                }
+
+                score(j);
+                reload_board();
+
+
+            }else{
+                    score(j);
+                    finaliza();
+            }
+        }
+
+        function score(j){
+            if(j == 1){
+                res_j1 ++;
+                document.getElementById("res_j1").innerHTML = res_j1;
+            }else if(j == 2){
+                res_j2 ++;
+                document.getElementById("res_j2").innerHTML = res_j2;
+            }
+        }
+
+        function reload_board(){
+            document.getElementById("aa").style.backgroundColor = "white";
+            document.getElementById("ab").style.backgroundColor = "white";
+            document.getElementById("ac").style.backgroundColor = "white";
+            document.getElementById("ba").style.backgroundColor = "white";
+            document.getElementById("bb").style.backgroundColor = "white";
+            document.getElementById("bc").style.backgroundColor = "white";
+            document.getElementById("ca").style.backgroundColor = "white";
+            document.getElementById("cb").style.backgroundColor = "white";
+            document.getElementById("cc").style.backgroundColor = "white";
+            matriz = [[0,0,0], [0,0,0], [0,0,0]];
+            cont_rodada = 0;
+        }
+
+        function finaliza(){
+            alert(`Placar final: Verde (${res_j2}) Vermelho (${res_j2}). Obrigado por Jogar.`);
+        }
+    </script>
+</body>
+</html>
