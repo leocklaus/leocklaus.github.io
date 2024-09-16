@@ -4,8 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my-portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link href="prism.css" rel="stylesheet" />
+
+
 </head>
 <body>
-    
+    <dialog class="modal">
+        <div class="modal--title">
+            <span>Please, select a language:</span>
+            <span>(Por favor, selecione uma língua)</span>
+        </div>
+        <form class="modal--buttons">
+            <button onclick="setLanguage('en')" type="button">English</button>
+            <button onclick="setLanguage('pt')" type="button">Português</button>
+        </form>
+    </dialog>
+    <main>
+        <section class="window">
+            <section class="bar">
+                <div class="buttons">
+                    <span class="close"></span>
+                    <span class="minimize"></span>
+                    <span class="maximize"></span>
+                </div>
+                <span class="bar--title">
+                    leocklaus
+                </span>
+            </section>
+            <header>
+                <div class="header--title">
+                    <span class="material-symbols-outlined icon--collection">
+                        library_books
+                    </span>
+                    <span>
+                        my-portfolio
+                    </span>
+                </div>
+                <div class="tabs">
+                    <div class="tab active-tab" id="tab--profile">
+                        <span class="tab--method">GET</span>
+                        <span class="tab--name">Profile</span>
+                        <span class="tab--close">
+                            <span class="material-symbols-outlined icon--close">
+                                close
+                            </span>
+                        </span>
+                    </div>
+                    <div class="tab" id="tab--portfolio">
+                        <span class="tab--method">GET</span>
+                        <span class="tab--name">Portfolio</span>
+                        <span class="tab--close">
+                            <span class="material-symbols-outlined icon--close">
+                                close
+                            </span>
+                        </span>
+                    </div>
+                    <div class="tab" id="tab--contact">
+                        <span class="tab--method">GET</span>
+                        <span class="tab--name">Contact</span>
+                        <span class="tab--close">
+                            <span class="material-symbols-outlined icon--close">
+                                close
+                            </span>
+                        </span>
+                    </div>
+                    <div class="tab tab--add">
+                        <span class="material-symbols-outlined icon--plus">
+                            add
+                        </span>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+                <div class="request">
+                    <div class="request--bar">
+                        <div class="request--method">
+                            <span>GET</span>  
+                        </div>
+                        <span class="material-symbols-outlined icon--dropdown">
+                            arrow_drop_down
+                        </span>
+                        <div class="request--url" id="request--url">
+                            /api/user/leocklaus?language=en
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="collections">
+                        <div class="collections--title" id="collections--title">
+                            <span class="material-symbols-outlined icon--arrow" id="collection--arrow">
+                                keyboard_arrow_down
+                            </span>
+                            <span>
+                                my-portfolio
+                            </span>
+                        </div>
+                        <div class="collections--buttons" id="collections">
+                            <div class="collections--button">
+                                 <div class="collections--button--content">
+                                    <div class="collections--spacer">
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="collections--button collections--active-button" id="collection--profile">
+                                <div class="collections--button--content">
+                                    <div class="collections--method">
+                                        GET
+                                    </div>
+                                    <div class="collections--request" id="collections--profile">
+                                        Profile
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collections--button" id="collection--portfolio">
+                                <div class="collections--button--content">
+                                    <div class="collections--method">
+                                        GET
+                                    </div>
+                                    <div class="collections--request" id="collections--portfolio">
+                                        Portfolio
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collections--button" id="collection--contact">
+                                <div class="collections--button--content">
+                                    <div class="collections--method">
+                                        GET
+                                    </div>
+                                    <div class="collections--request" id="collections--contact">
+                                        Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result--header">
+                            <div class="result--menu">
+                                <span class="result--menu--active">Response</span>
+                                <span>Headers</span>
+                            </div>
+                            <div class="result--info">
+                                <span class="result--info--status">200 OK</span>
+                                <span>1kb</span>
+                                <span>75ms</span>
+                            </div>
+                        </div>
+                        <div class="response">
+                            <!-- Pre tag to hold the JSON content -->
+                            <pre class="line-numbers"><code class="language-json" id="json-block"></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <span id="footer--text">Made with 1L (maybe 2) of &#9749; by leocklaus</span>
+            </div>
+        </section>
+    </main>
+    <script src="move_window.js" defer></script>
+    <script src="app.js"></script>
+    <!-- Prism.js and Plugins -->
+    <script src="prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/autoloader/prism-autoloader.js" data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/components/"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 </body>
 </html>
