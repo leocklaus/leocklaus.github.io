@@ -1,0 +1,37 @@
+{
+    "nome": "Leonardo Klaus",
+    "educacao": [
+        {
+            "instituicao": "Universidade Federal de Pelotas",
+            "curso": "Industrial Engineering",
+            "nivel": "Graduation"
+        },
+        {
+            "instituicao": "UNINTER",
+            "curso": "Gestão Comercial, Estratégia e Marketing",
+            "nivel": "MBA"
+        },
+        {
+            "instituicao": "Faculdade Libano",
+            "curso": "Software Engineering",
+            "nivel": "MBA"
+        }
+    ],
+    "education2": [
+        {
+            "institution": "Universidade Federal de Pelotas",
+            "couse": "Industrial Engineering",
+            "level": "Graduation"
+        },
+        {
+            "institution": "UNINTER",
+            "course": "Gestão Comercial, Estratégia e Marketing",
+            "level": "MBA"
+        },
+        {
+            "institution": "Faculdade Libano",
+            "course": "Software Engineering",
+            "level": "MBA"
+        }
+    ]
+}
