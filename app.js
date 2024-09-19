@@ -65,6 +65,7 @@ const updateData = async (pageName) => {
         const jsonData = await fetchData(fileName);
         const formattedJson = JSON.stringify(jsonData, null, 2);
         document.getElementById("json-block").textContent = formattedJson;
+        Prism.highlightElement(document.getElementById("json-block"));
     } catch (error) {
         console.error("Error fetching data:", error);
     }
