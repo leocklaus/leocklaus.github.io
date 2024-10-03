@@ -3,35 +3,55 @@
     "education": [
         {
             "institution": "Universidade Federal de Pelotas",
-            "couse": "Industrial Engineering",
-            "level": "Graduation"
+            "couse": "Industrial Engineering"
+        },
+        {
+            "institution": "Faculdade Libano",
+            "course": "Software Engineering"
+        },
+        {
+            "institution": "Faculdade Libano",
+            "course": "Data Science"
         },
         {
             "institution": "UNINTER",
             "course": "Gestão Comercial, Estratégia e Marketing",
-            "level": "MBA"
-        },
-        {
-            "institution": "Faculdade Libano",
-            "course": "Software Engineering",
             "level": "MBA"
         }
     ],
-    "education2": [
-        {
-            "institution": "Universidade Federal de Pelotas",
-            "couse": "Industrial Engineering",
-            "level": "Graduation"
-        },
-        {
-            "institution": "UNINTER",
-            "course": "Gestão Comercial, Estratégia e Marketing",
-            "level": "MBA"
-        },
-        {
-            "institution": "Faculdade Libano",
-            "course": "Software Engineering",
-            "level": "MBA"
-        }
-    ]
+    "skills": {
+        "backend": [
+            {
+                "language": "JAVA",
+                "framework": "Spring"
+            },
+            {
+                "language": "Javascript/Typescript with NODE",
+                "framework": "Express"
+            }
+        ],
+        "frontend": [
+            {
+                "language": "Javascript/Typescript",
+                "framework": ["Angular", "NextJs"],
+                "library": "React"
+            }
+        ],
+        "dataScience": [
+            {
+                "language": "Python",
+                "library": "Pandas"
+            }
+        ],
+        "dB": ["MySQL", "PostgreSQL", "SQLite", "Redis", "MongoDB"],
+        "html5": true,
+        "css3": true,
+        "sass/Scss": true,
+        "tailwind": true,
+        "git": true,
+        "docker": true,
+        "rabitMQ": true,
+        "OOP": true
+    }
+    
 }

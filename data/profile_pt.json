@@ -3,35 +3,56 @@
     "educacao": [
         {
             "instituicao": "Universidade Federal de Pelotas",
-            "curso": "Industrial Engineering",
-            "nivel": "Graduation"
+            "curso": "Engenharia de Produção",
+            "nivel": "Graduação"
+        },
+        {
+            "instituicao": "Faculdade Libano",
+            "curso": "Engenharia de Software",
+            "nivel": "Pós-Graduação"
+        },
+        {
+            "instituicao": "Faculdade Libano",
+            "curso": "Ciência de Dados",
+            "nivel": "Pós-Graduação"
         },
         {
             "instituicao": "UNINTER",
             "curso": "Gestão Comercial, Estratégia e Marketing",
             "nivel": "MBA"
-        },
-        {
-            "instituicao": "Faculdade Libano",
-            "curso": "Software Engineering",
-            "nivel": "MBA"
         }
     ],
-    "education2": [
-        {
-            "institution": "Universidade Federal de Pelotas",
-            "couse": "Industrial Engineering",
-            "level": "Graduation"
-        },
-        {
-            "institution": "UNINTER",
-            "course": "Gestão Comercial, Estratégia e Marketing",
-            "level": "MBA"
-        },
-        {
-            "institution": "Faculdade Libano",
-            "course": "Software Engineering",
-            "level": "MBA"
-        }
-    ]
+    "habilidades": {
+        "backend": [
+            {
+                "linguagem": "JAVA",
+                "framework": "Spring"
+            },
+            {
+                "linguagem": "Javascript/Typescript com NODE",
+                "framework": "Express"
+            }
+        ],
+        "frontend": [
+            {
+                "linguagem": "Javascript/Typescript",
+                "framework": ["Angular", "NextJs"],
+                "biblioteca": "React"
+            }
+        ],
+        "cienciaDeDados": [
+            {
+                "linguagem": "Python",
+                "biblioteca": "Pandas"
+            }
+        ],
+        "dB": ["MySQL", "PostgreSQL", "SQLite", "Redis", "MongoDB"],
+        "htmlSemantico": true,
+        "sass/Scss": true,
+        "tailwind": true,
+        "git": true,
+        "docker": true,
+        "rabitMQ": true,
+        "POO": true
+    }
 }
