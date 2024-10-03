@@ -1,8 +1,53 @@
 {
-    "projetos": [
-        {
-            "nome": "Project 1",
-            "descricao": "Description"
-        }
-    ]
+    "projetos": {
+        "backend": [
+            {
+                "nome": "Project Manager",
+                "descricao": "Gerenciador de Projetos, com Taks e Subtasks",
+                "repositorio": "https://github.com/leocklaus/projects-manager-api/"
+            },
+            {
+                "nome": "Thughts",
+                "descricao": "Rede Social no estilo Microblog",
+                "repositorio": "https://github.com/leocklaus/thoughts-api"
+            },
+            {
+                "nome": "Tá Disponível",
+                "descricao": "Unir pessoas que querem se desapegar com pessoas que precisam de algum item",
+                "repositorio": "https://github.com/leocklaus/ta-disponivel-api"
+            },
+            {
+                "nome": "Microscerviços com Spring",
+                "descricao": "Curso de Microserviços com Spring",
+                "repositorio": "https://github.com/leocklaus/spring-curso-microservices"
+            },
+            {
+                "nome": "Sistema de Ficas",
+                "descricao": "Permite gerenciar fichas de clientes",
+                "repositorio": "https://github.com/leocklaus/sistema-de-fichas-springboot"
+            }
+        ],
+        "frontend": [
+            {
+                "nome": "Thoughts",
+                "descricao": "Rede Social no estilo Microblog", 
+                "repositorio": "https://github.com/leocklaus/thoughts-frontend"
+            },
+            {
+                "nome": "Ecommerce com Angular Signals",
+                "descricao": "Pequeno ecommerce para aplicar angular signals", 
+                "repositorio": "https://github.com/leocklaus/ecommerce-with-angular-signals"
+            },
+            {
+                "nome": "Coffee Shop",
+                "descricao": "Página de uma cafeteria",
+                "repositorio": "https://github.com/leocklaus/coffee-shop-angular"
+            },
+            {
+                "nome": "Sistema de Ficas",
+                "descricao":"Permite gerenciar fichas de clientes",
+                "repositorio": "https://github.com/leocklaus/sistema-de-fichas"
+            }
+        ]
+    }
 }

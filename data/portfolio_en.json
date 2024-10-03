@@ -1,8 +1,53 @@
 {
-    "projects": [
-        {
-            "name": "Project 1",
-            "description": "Description"
-        }
-    ]
+    "projects": {
+        "backend": [
+            {
+                "name": "Project Manager",
+                "description": "Project Manager, with Tasks and Subtasks",
+                "repository": "https://github.com/leocklaus/projects-manager-api/"
+            },
+            {
+                "name": "Thoughts",
+                "description": "Social Network in Microblog style",
+                "repository": "https://github.com/leocklaus/thoughts-api"
+            },
+            {
+                "name": "Tá Disponível",
+                "description": "Connects people who want to get rid of items with people who need them",
+                "repository": "https://github.com/leocklaus/ta-disponivel-api"
+            },
+            {
+                "name": "Microservices with Spring",
+                "description": "Microservices with Spring course",
+                "repository": "https://github.com/leocklaus/spring-curso-microservices"
+            },
+            {
+                "name": "Client Record System",
+                "description": "Allows managing client records",
+                "repository": "https://github.com/leocklaus/sistema-de-fichas-springboot"
+            }
+        ],
+        "frontend": [
+            {
+                "name": "Thoughts",
+                "description": "Social Network in Microblog style", 
+                "repository": "https://github.com/leocklaus/thoughts-frontend"
+            },
+            {
+                "name": "Ecommerce with Angular Signals",
+                "description": "Small ecommerce to apply Angular signals", 
+                "repository": "https://github.com/leocklaus/ecommerce-with-angular-signals"
+            },
+            {
+                "name": "Coffee Shop",
+                "description": "Coffee shop webpage",
+                "repository": "https://github.com/leocklaus/coffee-shop-angular"
+            },
+            {
+                "name": "Client Record System",
+                "description": "Allows managing client records",
+                "repository": "https://github.com/leocklaus/sistema-de-fichas"
+            }
+        ]
+    }
 }
