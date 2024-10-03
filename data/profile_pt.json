@@ -47,12 +47,14 @@
             }
         ],
         "dB": ["MySQL", "PostgreSQL", "SQLite", "Redis", "MongoDB"],
-        "htmlSemantico": true,
-        "sass/Scss": true,
-        "tailwind": true,
-        "git": true,
-        "docker": true,
-        "rabitMQ": true,
-        "POO": true
+        "outrasHabilidades":{
+            "htmlSemantico": true,
+            "sass/Scss": true,
+            "tailwind": true,
+            "git": true,
+            "docker": true,
+            "rabitMQ": true,
+            "POO": true
+        }
     }
 }

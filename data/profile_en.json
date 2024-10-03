@@ -44,14 +44,16 @@
             }
         ],
         "dB": ["MySQL", "PostgreSQL", "SQLite", "Redis", "MongoDB"],
-        "html5": true,
-        "css3": true,
-        "sass/Scss": true,
-        "tailwind": true,
-        "git": true,
-        "docker": true,
-        "rabitMQ": true,
-        "OOP": true
+        "otherSkills": {
+            "html5": true,
+            "css3": true,
+            "sass/Scss": true,
+            "tailwind": true,
+            "git": true,
+            "docker": true,
+            "rabitMQ": true,
+            "OOP": true
+        }
     }
     
 }
