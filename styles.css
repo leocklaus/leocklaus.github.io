@@ -196,7 +196,7 @@ header {
 
 .collections {
     border-right: 2px solid #353535;
-    width: 300px;
+    min-width: 200px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -254,6 +254,7 @@ header {
     padding-left: 24px;
     max-height: 400px;
     gap: 8px;
+    max-width: calc(100% - 200px + 12px);
 }
 
 .result--header {
@@ -293,7 +294,7 @@ header {
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #ccc #1c1c1c;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .footer {
@@ -411,6 +412,9 @@ header {
     }
     .window {
         width: 750px;
+    }
+    .result {
+        max-width: 100%;
     }
 }
 
