@@ -293,6 +293,7 @@ header {
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #ccc #1c1c1c;
+    font-size: 12px;
 }
 
 .footer {
